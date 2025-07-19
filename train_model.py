@@ -23,11 +23,3 @@ os.makedirs('model', exist_ok=True)
 with open('model/model.pkl', 'wb') as f:
     pickle.dump((sc, classifier), f)
 
-
-print(classifier.predict(sc.transform([[30,87000]])))
-'''
-predicting test set results -->
-y_pred = classifier.predict(X_test)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
-
-'''
